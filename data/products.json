@@ -1,1 +1,27 @@
-[]
+[
+  {
+    "id": "porta-cepillo-personalizado",
+    "title": "Porta Cepillo Personalizado",
+    "category": "Higiene y viaje",
+    "price": 4500,
+    "currency": "ARS",
+    "published": true,
+    "featured": true,
+    "badge": "Personalizable",
+    "short": "Protege tu cepillo en traslados, mochilas y viajes.",
+    "description": "Porta cepillo impreso en 3D, ventilado y personalizable con nombre. Pensado para proteger el cepillo de suciedad, bacterias y roces cuando lo llevás en la mochila, bolso o valija.",
+    "details": [
+      "Nombre personalizado incluido",
+      "Diseño ventilado para secado rápido",
+      "Compacto, liviano y resistente",
+      "Ideal para viajes, escuela, club y neceser"
+    ],
+    "images": [
+      "assets/products/porta-cepillo-principal.svg",
+      "assets/products/porta-cepillo-varios.svg",
+      "assets/products/porta-cepillo-viaje.svg",
+      "assets/products/porta-cepillo-abierto.svg",
+      "assets/products/porta-cepillo-flyer.svg"
+    ]
+  }
+]
