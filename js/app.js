@@ -45,7 +45,10 @@ const carouselSlide = (product, index) => `
         <strong>${money(product.price)}</strong>
         <span>${product.category || 'Producto VECTOR'}</span>
       </div>
-      <a class="button primary" href="#${product.id}">Ver producto</a>
+      <div class="hero-actions">
+        <a class="button primary" href="${whatsappUrl(product.title)}" target="_blank" rel="noreferrer">Consultar por WhatsApp</a>
+        <a class="button secondary" href="#${product.id}">Ver producto</a>
+      </div>
     </div>
     <div class="slide-gallery">
       <img class="slide-main-image" src="${product.images?.[0] || ''}" alt="${product.title}">
@@ -73,7 +76,7 @@ const setSlide = (index) => {
 const startCarousel = () => {
   window.clearInterval(carouselTimer);
   if (featuredProducts.length > 1) {
-    carouselTimer = window.setInterval(() => setSlide(activeSlide + 1), 6200);
+    carouselTimer = window.setInterval(() => setSlide(activeSlide + 1), 5200);
   }
 };
 
@@ -107,6 +110,9 @@ fetch('data/products.json')
         startCarousel();
       });
     });
+
+    carousel?.addEventListener('mouseenter', () => window.clearInterval(carouselTimer));
+    carousel?.addEventListener('mouseleave', startCarousel);
 
     setSlide(0);
     startCarousel();
