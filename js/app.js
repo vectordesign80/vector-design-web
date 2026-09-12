@@ -14,6 +14,7 @@ let activeSlide = 0;
 let carouselTimer;
 
 const money = (value) => value ? formatter.format(value) : 'Consultar';
+const whatsappUrl = (title) => `https://wa.me/5492914042633?text=${encodeURIComponent(`Hola VECTOR, quiero consultar por ${title}.`)}`;
 
 const productCard = (product, index) => `
   <article class="card product-card" style="--card-index:${index}">
@@ -28,7 +29,7 @@ const productCard = (product, index) => `
       <ul>${(product.details || []).map((item) => `<li>${item}</li>`).join('')}</ul>
       <div class="product-footer">
         <div class="price">${money(product.price)}</div>
-        <a class="mini-button" href="mailto:vectordesign80@gmail.com?subject=Pedido%20${encodeURIComponent(product.title)}">Consultar</a>
+        <a class="mini-button" href="${whatsappUrl(product.title)}" target="_blank" rel="noreferrer">Consultar por WhatsApp</a>
       </div>
     </div>
   </article>
