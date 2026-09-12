@@ -9,19 +9,60 @@
     "featured": true,
     "badge": "Personalizable",
     "short": "Protege tu cepillo en traslados, mochilas y viajes.",
-    "description": "Porta cepillo impreso en 3D, ventilado y personalizable con nombre. Pensado para proteger el cepillo de suciedad, bacterias y roces cuando lo llevás en la mochila, bolso o valija.",
-    "details": [
-      "Nombre personalizado incluido",
-      "Diseño ventilado para secado rápido",
-      "Compacto, liviano y resistente",
-      "Ideal para viajes, escuela, club y neceser"
-    ],
-    "images": [
-      "assets/products/porta-cepillo-principal.svg",
-      "assets/products/porta-cepillo-varios.svg",
-      "assets/products/porta-cepillo-viaje.svg",
-      "assets/products/porta-cepillo-abierto.svg",
-      "assets/products/porta-cepillo-flyer.svg"
-    ]
+    "description": "Porta cepillo impreso en 3D, ventilado y personalizable con nombre. Pensado para proteger el cepillo de suciedad y roces cuando lo llevás en la mochila, bolso o valija.",
+    "details": ["Nombre personalizado incluido","Diseño ventilado","Compacto y liviano","Ideal para viajes, escuela, club y neceser"],
+    "images": ["assets/products/porta-cepillo-principal.svg","assets/products/porta-cepillo-varios.svg","assets/products/porta-cepillo-viaje.svg","assets/products/porta-cepillo-abierto.svg","assets/products/porta-cepillo-flyer.svg"]
+  },
+  {
+    "id": "chopp-olimpo",
+    "title": "Chopp Personalizado Olimpo",
+    "category": "Clubes · Chopps",
+    "price": null,
+    "published": true,
+    "featured": true,
+    "badge": "Club Olimpo",
+    "short": "Chopp personalizado con identidad aurinegra.",
+    "description": "Chopp personalizado de Club Olimpo con cuerpo exterior impreso en 3D y diseño temático del club.",
+    "details": ["Personalización temática del club","Fabricación 3D","Ideal para regalo o uso personal"],
+    "images": ["assets/products/chopp-olimpo.svg"]
+  },
+  {
+    "id": "chopp-villa-mitre",
+    "title": "Chopp Personalizado Villa Mitre",
+    "category": "Clubes · Chopps",
+    "price": null,
+    "published": true,
+    "featured": true,
+    "badge": "Villa Mitre",
+    "short": "Diseño tricolor personalizado para hinchas de Villa Mitre.",
+    "description": "Chopp personalizado de Villa Mitre con cuerpo exterior impreso en 3D y estética inspirada en los colores del club.",
+    "details": ["Personalización temática del club","Fabricación 3D","Ideal para regalo o uso personal"],
+    "images": ["assets/products/chopp-villa-mitre.svg"]
+  },
+  {
+    "id": "chopp-la-armonia",
+    "title": "Chopp Personalizado La Armonía",
+    "category": "Clubes · Chopps",
+    "price": null,
+    "published": true,
+    "featured": true,
+    "badge": "Club La Armonía",
+    "short": "Chopp personalizado con identidad del Club La Armonía.",
+    "description": "Chopp personalizado del Club La Armonía, desarrollado como producto temático y fabricado mediante impresión 3D.",
+    "details": ["Diseño personalizado","Fabricación 3D","Ideal para regalo o uso personal"],
+    "images": ["assets/products/chopp-la-armonia.svg"]
+  },
+  {
+    "id": "chopp-puerto-comercial",
+    "title": "Chopp Personalizado Puerto Comercial",
+    "category": "Clubes · Chopps",
+    "price": null,
+    "published": true,
+    "featured": true,
+    "badge": "Puerto Comercial",
+    "short": "Chopp verde y amarillo personalizado para Puerto Comercial.",
+    "description": "Chopp personalizado del Club Puerto Comercial con diseño temático en sus colores y fabricación 3D.",
+    "details": ["Personalización temática del club","Fabricación 3D","Ideal para regalo o uso personal"],
+    "images": ["assets/products/chopp-puerto-comercial.svg"]
   }
 ]
