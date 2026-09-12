@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1536 860" role="img" aria-labelledby="title desc">
+<title id="title">VECTOR Design</title><desc id="desc">De tu mente a tus manos</desc>
+<rect width="1536" height="860" fill="#000"/>
+<g transform="translate(768 210)">
+  <polygon points="-310,-155 -225,-155 -45,65 -105,145" fill="#fff"/>
+  <polygon points="-220,-155 -135,-155 -10,18 -55,72" fill="#fff"/>
+  <polygon points="35,-70 185,-155 275,-155 75,45" fill="#e10600"/>
+  <polygon points="95,0 250,-155 335,-155 130,55" fill="#e10600"/>
+</g>
+<text x="768" y="575" fill="#fff" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="205" letter-spacing="-12">VECTOR</text>
+<text x="768" y="690" fill="#fff" text-anchor="middle" font-family="Montserrat,Arial,sans-serif" font-weight="500" font-size="72" letter-spacing="64">DESIGN</text>
+<line x1="120" y1="738" x2="1416" y2="738" stroke="#e10600" stroke-width="10"/>
+<polygon points="768,690 782,738 768,786 754,738" fill="#e10600"/>
+<text x="768" y="825" fill="#fff" text-anchor="middle" font-family="Montserrat,Arial,sans-serif" font-weight="800" font-size="42" letter-spacing="17">DE TU MENTE A TUS MANOS</text>
+</svg>
