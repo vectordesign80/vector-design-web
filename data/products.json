@@ -1,10 +1,1 @@
-[
-  {
-    "id": "prueba-publicacion",
-    "title": "Publicación automática funcionando",
-    "category": "Prueba",
-    "description": "Este producto de prueba fue publicado desde ChatGPT para verificar la actualización automática del catálogo de Vector Design.",
-    "price": 12345,
-    "published": true
-  }
-]
+[]
