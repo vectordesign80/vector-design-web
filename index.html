@@ -19,9 +19,9 @@
   <header class="site-header">
     <a class="brand-mark" href="#inicio" aria-label="VECTOR inicio"></a>
     <nav class="main-nav" aria-label="Navegación principal">
+      <a href="#destacados">Destacados</a>
       <a href="#servicios">Servicios</a>
       <a href="#productos">Catálogo</a>
-      <a href="#personalizados">Personalizados</a>
       <a href="#contacto">Contacto</a>
     </nav>
   </header>
@@ -45,6 +45,21 @@
       </div>
     </section>
 
+    <section id="destacados" class="featured-section" aria-labelledby="featured-title">
+      <div class="featured-header">
+        <div>
+          <p class="eyebrow dark">Productos destacados</p>
+          <h2 id="featured-title">Lo nuevo de VECTOR</h2>
+        </div>
+        <div class="carousel-controls" aria-label="Controles del carrusel">
+          <button class="icon-button" type="button" data-carousel-prev aria-label="Producto anterior">‹</button>
+          <button class="icon-button" type="button" data-carousel-next aria-label="Producto siguiente">›</button>
+        </div>
+      </div>
+      <div class="featured-carousel" data-carousel aria-live="polite"></div>
+      <div class="carousel-dots" data-carousel-dots aria-label="Paginación del carrusel"></div>
+    </section>
+
     <section id="servicios" class="section service-band">
       <div class="section-heading">
         <p class="eyebrow dark">Qué hacemos</p>
@@ -61,7 +76,7 @@
       <div class="section-heading">
         <p class="eyebrow dark">Catálogo</p>
         <h2>Productos VECTOR</h2>
-        <p class="section-intro">Estamos preparando el catálogo online. Pronto vas a poder ver productos, precios, variantes y armar tu pedido.</p>
+        <p class="section-intro">Productos reales, personalizados y listos para pedir. Cada ficha muestra precio, uso y opciones disponibles.</p>
       </div>
       <div id="product-grid" class="grid"></div>
     </section>
