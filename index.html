@@ -9,13 +9,15 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/splash.css">
 </head>
-<body>
+<body class="splash-active">
+  <div class="brand-splash" aria-hidden="true">
+    <img class="splash-logo" src="assets/vector-logo.svg" alt="">
+  </div>
+
   <header class="site-header">
-    <a class="brand-mark" href="#inicio" aria-label="VECTOR inicio">
-      <span class="brand-v">V</span>
-      <span class="brand-text"><strong>VECTOR</strong><small>Diseño & Impresión 3D</small></span>
-    </a>
+    <a class="brand-mark" href="#inicio" aria-label="VECTOR inicio"></a>
     <nav class="main-nav" aria-label="Navegación principal">
       <a href="#servicios">Servicios</a>
       <a href="#productos">Catálogo</a>
@@ -49,21 +51,9 @@
         <h2>Diseñamos, fabricamos y personalizamos piezas 3D.</h2>
       </div>
       <div class="service-grid">
-        <article>
-          <span>01</span>
-          <h3>Productos personalizados</h3>
-          <p>Chopps, llaveros, regalos, nombres, logos y piezas únicas para clubes, negocios y eventos.</p>
-        </article>
-        <article>
-          <span>02</span>
-          <h3>Diseño a medida</h3>
-          <p>Convertimos una idea, foto o necesidad concreta en un modelo listo para fabricar.</p>
-        </article>
-        <article>
-          <span>03</span>
-          <h3>Impresión 3D</h3>
-          <p>Fabricación de objetos funcionales, decorativos y comerciales con terminaciones cuidadas.</p>
-        </article>
+        <article><span>01</span><h3>Productos personalizados</h3><p>Chopps, llaveros, regalos, nombres, logos y piezas únicas para clubes, negocios y eventos.</p></article>
+        <article><span>02</span><h3>Diseño a medida</h3><p>Convertimos una idea, foto o necesidad concreta en un modelo listo para fabricar.</p></article>
+        <article><span>03</span><h3>Impresión 3D</h3><p>Fabricación de objetos funcionales, decorativos y comerciales con terminaciones cuidadas.</p></article>
       </div>
     </section>
 
@@ -87,10 +77,7 @@
   </main>
 
   <footer id="contacto" class="site-footer">
-    <div class="footer-brand">
-      <strong>VECTOR</strong>
-      <span>Diseño & Impresión 3D</span>
-    </div>
+    <div class="footer-brand"><strong>VECTOR</strong><span>Diseño & Impresión 3D</span></div>
     <div class="footer-links">
       <a href="https://www.instagram.com/vector.design3d" target="_blank" rel="noreferrer">@vector.design3d</a>
       <a href="mailto:vectordesign80@gmail.com">vectordesign80@gmail.com</a>
@@ -99,5 +86,32 @@
   </footer>
 
   <script src="js/app.js"></script>
+  <script>
+    (() => {
+      const body = document.body;
+      const splash = document.querySelector('.brand-splash');
+      const logo = document.querySelector('.splash-logo');
+      const brand = document.querySelector('.brand-mark');
+
+      const dockLogo = () => {
+        if (logo && brand) {
+          logo.className = 'brand-logo';
+          logo.alt = 'VECTOR Design - De tu mente a tus manos';
+          brand.appendChild(logo);
+        }
+        splash?.remove();
+        body.classList.add('splash-done');
+        body.classList.remove('splash-active', 'splash-run');
+      };
+
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        dockLogo();
+        return;
+      }
+
+      requestAnimationFrame(() => body.classList.add('splash-run'));
+      window.setTimeout(dockLogo, 2200);
+    })();
+  </script>
 </body>
 </html>
