@@ -9,7 +9,7 @@ const formatter = new Intl.NumberFormat('es-AR', {
   maximumFractionDigits: 0
 });
 
-let featuredProducts = [];
+let featuredItems = [];
 let activeSlide = 0;
 let carouselTimer;
 
@@ -35,33 +35,16 @@ const productCard = (product, index) => `
   </article>
 `;
 
-const carouselSlide = (product, index) => `
-  <article class="carousel-slide ${index === 0 ? 'is-active' : ''}" data-slide="${index}" aria-hidden="${index === 0 ? 'false' : 'true'}">
-    <div class="slide-copy">
-      <p class="eyebrow dark">${product.badge || 'Destacado'}</p>
-      <h3>${product.title}</h3>
-      <p>${product.short || product.description || ''}</p>
-      <div class="slide-meta">
-        <strong>${money(product.price)}</strong>
-        <span>${product.category || 'Producto VECTOR'}</span>
-      </div>
-      <div class="hero-actions">
-        <a class="button primary" href="${whatsappUrl(product.title)}" target="_blank" rel="noreferrer">Consultar por WhatsApp</a>
-        <a class="button secondary" href="#${product.id}">Ver producto</a>
-      </div>
-    </div>
-    <div class="slide-gallery">
-      <img class="slide-main-image" src="${product.images?.[0] || ''}" alt="${product.title}">
-      <div class="slide-thumbs" aria-hidden="true">
-        ${(product.images || []).slice(1, 5).map((image) => `<img src="${image}" alt="">`).join('')}
-      </div>
-    </div>
-  </article>
+const featuredImage = (item, index) => `
+  <a class="carousel-slide ${index === 0 ? 'is-active' : ''}" data-slide="${index}" href="#${item.product.id}" aria-label="Ver ${item.product.title}" aria-hidden="${index === 0 ? 'false' : 'true'}">
+    <img src="${item.image}" alt="${item.product.title}" loading="${index === 0 ? 'eager' : 'lazy'}">
+    <span>Ver producto</span>
+  </a>
 `;
 
 const setSlide = (index) => {
-  if (!featuredProducts.length) return;
-  activeSlide = (index + featuredProducts.length) % featuredProducts.length;
+  if (!featuredItems.length) return;
+  activeSlide = (index + featuredItems.length) % featuredItems.length;
   document.querySelectorAll('[data-slide]').forEach((slide, slideIndex) => {
     const active = slideIndex === activeSlide;
     slide.classList.toggle('is-active', active);
@@ -75,8 +58,8 @@ const setSlide = (index) => {
 
 const startCarousel = () => {
   window.clearInterval(carouselTimer);
-  if (featuredProducts.length > 1) {
-    carouselTimer = window.setInterval(() => setSlide(activeSlide + 1), 5200);
+  if (featuredItems.length > 1) {
+    carouselTimer = window.setInterval(() => setSlide(activeSlide + 1), 3200);
   }
 };
 
@@ -92,9 +75,11 @@ fetch('data/products.json')
     }
 
     grid.innerHTML = published.map(productCard).join('');
-    featuredProducts = published.filter((product) => product.featured);
-    carousel.innerHTML = featuredProducts.map(carouselSlide).join('');
-    dots.innerHTML = featuredProducts.map((product, index) => `<button type="button" aria-label="Ver destacado ${index + 1}"></button>`).join('');
+    featuredItems = published
+      .filter((product) => product.featured)
+      .flatMap((product) => (product.images || []).map((image) => ({ product, image })));
+    carousel.innerHTML = featuredItems.map(featuredImage).join('');
+    dots.innerHTML = featuredItems.map((item, index) => `<button type="button" aria-label="Ver foto destacada ${index + 1}"></button>`).join('');
 
     prevButton?.addEventListener('click', () => {
       setSlide(activeSlide - 1);
