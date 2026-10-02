@@ -31,6 +31,8 @@ jobs:
           mkdir -p scanner-app
           tar -xzf scanner-app-source.tgz -C scanner-app
           sed -i 's/import com.google.ar.core.NotYetAvailableException/import com.google.ar.core.exceptions.NotYetAvailableException/' scanner-app/app/src/main/java/com/vector/scan3d/PointCloudFusion.kt
+          sed -i 's/val hint=TextView(this).apply{/val hintText=TextView(this).apply{/' scanner-app/app/src/main/java/com/vector/scan3d/MainActivity.kt
+          sed -i 's/box.addView(hint);box.addView(spinner);box.addView(input)/box.addView(hintText);box.addView(spinner);box.addView(input)/' scanner-app/app/src/main/java/com/vector/scan3d/MainActivity.kt
 
       - name: Ensure Android SDK 35
         shell: bash
