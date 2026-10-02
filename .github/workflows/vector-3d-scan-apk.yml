@@ -3,9 +3,8 @@ name: Build Vector 3D Scan APK
 on:
   push:
     branches: [vector-3d-scan-build]
-    paths:
-      - 'scanner-app-source.tgz'
-      - '.github/workflows/vector-3d-scan-apk.yml'
+  pull_request:
+    branches: [main]
   workflow_dispatch:
 
 jobs:
