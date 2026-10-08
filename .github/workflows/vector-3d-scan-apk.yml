@@ -57,6 +57,14 @@ jobs:
           new_call = "fusion.integrateHybridDepth(frame, anchor.pose).added"
           src = src.replace(original_raw, new_call).replace(original_sparse, new_call)
           p.write_text(src)
+          overlay = Path("scanner-app/app/src/main/java/com/vector/scan3d/MaskOverlayView.kt")
+          original = overlay.read_text()
+          assert "var enabled: Boolean = true" in original
+          overlay.write_text(original.replace("var enabled: Boolean = true", "var maskEnabled: Boolean = true").replace("if (!enabled) return", "if (!maskEnabled) return"))
+          activity = Path("scanner-app/app/src/main/java/com/vector/scan3d/MainActivity.kt")
+          original = activity.read_text()
+          assert "maskOverlay.enabled = maskVisible" in original
+          activity.write_text(original.replace("maskOverlay.enabled = maskVisible", "maskOverlay.maskEnabled = maskVisible"))
           PY
 
 
