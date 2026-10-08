@@ -51,14 +51,12 @@ jobs:
           from pathlib import Path
           p = Path("scanner-app/app/src/main/java/com/vector/scan3d/ScanRenderer.kt")
           src = p.read_text()
-          old = """val added = if (depthEnabled) {
-                fusion.integrateRawDepth(frame, anchor.pose)
-            } else {
-                fusion.integrateFeaturePoints(frame, anchor.pose)
-            }"""
-          new = "val added = fusion.integrateHybridDepth(frame, anchor.pose).added"
-          assert old in src, "La interfaz híbrida de 1.3 no coincide"
-          p.write_text(src.replace(old, new))
+          original_raw = "fusion.integrateRawDepth(frame, anchor.pose)"
+          original_sparse = "fusion.integrateFeaturePoints(frame, anchor.pose)"
+          assert original_raw in src and original_sparse in src, "Firma de la versión 1.4 no coincide"
+          new_call = "fusion.integrateHybridDepth(frame, anchor.pose).added"
+          src = src.replace(original_raw, new_call).replace(original_sparse, new_call)
+          p.write_text(src)
           PY
 
 
