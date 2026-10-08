@@ -34,6 +34,20 @@ jobs:
           sed -i 's/val hint=TextView(this).apply{/val hintText=TextView(this).apply{/' scanner-app/app/src/main/java/com/vector/scan3d/MainActivity.kt
           sed -i 's/box.addView(hint);box.addView(spinner);box.addView(input)/box.addView(hintText);box.addView(spinner);box.addView(input)/' scanner-app/app/src/main/java/com/vector/scan3d/MainActivity.kt
           sed -i 's/val input=EditText(this).apply{hint=/val input=EditText(this).apply{this.hint=/' scanner-app/app/src/main/java/com/vector/scan3d/MainActivity.kt
+      
+      - name: Apply v1.4 visual-mask sources
+        shell: bash
+        run: |
+          set -euo pipefail
+          echo '299c8e77f9d40f5a9d5d06903b1c6503a8ccaebcd9c7780157300fc6036c540f  scanner-v14-overlay.tgz' > /tmp/v14.sha256
+          base64 --decode scanner-v14-overlay.b64 > scanner-v14-overlay.tgz
+          sha256sum -c /tmp/v14.sha256
+          tar -xzf scanner-v14-overlay.tgz -C scanner-app
+          grep -q 'versionName = "1.4.0"' scanner-app/app/build.gradle.kts
+          test -f scanner-app/app/src/main/java/com/vector/scan3d/MaskEngine.kt
+          test -f scanner-app/app/src/main/java/com/vector/scan3d/MaskAnalyzer.kt
+          test -f scanner-app/app/src/main/java/com/vector/scan3d/MaskOverlayView.kt
+
 
       - name: Ensure Android SDK 35
         shell: bash
@@ -50,6 +64,6 @@ jobs:
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
-          name: Vector3DScan-APK
+          name: Vector3DScan-v1.4-APK
           path: scanner-app/app/build/outputs/apk/debug/app-debug.apk
           if-no-files-found: error
