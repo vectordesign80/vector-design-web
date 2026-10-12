@@ -1,26 +1,5 @@
 [
   {
-    "id": "porta-celular-tornasolado",
-    "title": "Porta Celular Tornasolado",
-    "category": "Accesorios · Celulares",
-    "price": 10000,
-    "currency": "ARS",
-    "published": true,
-    "featured": true,
-    "badge": "Tornasolado",
-    "short": "Soporte para celular con acabado tornasolado, de diseño curvo y moderno.",
-    "description": "Porta celular impreso en 3D con terminación tornasolada y diseño curvo. Ideal para apoyar el teléfono en el escritorio, la mesa de luz o tu espacio de trabajo.",
-    "details": [
-      "Precio por unidad",
-      "Fabricado mediante impresión 3D",
-      "Diseño curvo para apoyar el celular",
-      "Acabados tornasolados en tonos verde-azul y rojo-plata"
-    ],
-    "images": [
-      "assets/products/porta-celular-tornasolado-vector.jpg"
-    ]
-  },
-  {
     "id": "porta-cepillo-personalizado",
     "title": "Porta Cepillo Personalizado",
     "category": "Higiene y viaje",
@@ -31,19 +10,8 @@
     "badge": "Personalizable",
     "short": "Protege tu cepillo en traslados, mochilas y viajes.",
     "description": "Porta cepillo impreso en 3D, ventilado y personalizable con nombre. Pensado para proteger el cepillo de suciedad y roces cuando lo llevás en la mochila, bolso o valija.",
-    "details": [
-      "Nombre personalizado incluido",
-      "Diseño ventilado",
-      "Compacto y liviano",
-      "Ideal para viajes, escuela, club y neceser"
-    ],
-    "images": [
-      "assets/products/porta-cepillo-principal.svg",
-      "assets/products/porta-cepillo-varios.svg",
-      "assets/products/porta-cepillo-viaje.svg",
-      "assets/products/porta-cepillo-abierto.svg",
-      "assets/products/porta-cepillo-flyer.svg"
-    ]
+    "details": ["Nombre personalizado incluido","Diseño ventilado","Compacto y liviano","Ideal para viajes, escuela, club y neceser"],
+    "images": ["assets/products/porta-cepillo-principal.svg","assets/products/porta-cepillo-varios.svg","assets/products/porta-cepillo-viaje.svg","assets/products/porta-cepillo-abierto.svg","assets/products/porta-cepillo-flyer.svg"]
   },
   {
     "id": "chopp-olimpo",
@@ -56,14 +24,8 @@
     "badge": "Club Olimpo",
     "short": "Chopp personalizado con identidad aurinegra.",
     "description": "Chopp personalizado de Club Olimpo con cuerpo exterior impreso en 3D y diseño temático del club.",
-    "details": [
-      "Personalización temática del club",
-      "Fabricación 3D",
-      "Ideal para regalo o uso personal"
-    ],
-    "images": [
-      "assets/products/chopp-olimpo.svg"
-    ]
+    "details": ["Personalización temática del club","Fabricación 3D","Ideal para regalo o uso personal"],
+    "images": ["assets/products/chopp-olimpo.svg"]
   },
   {
     "id": "chopp-villa-mitre",
@@ -76,14 +38,8 @@
     "badge": "Villa Mitre",
     "short": "Diseño tricolor personalizado para hinchas de Villa Mitre.",
     "description": "Chopp personalizado de Villa Mitre con cuerpo exterior impreso en 3D y estética inspirada en los colores del club.",
-    "details": [
-      "Personalización temática del club",
-      "Fabricación 3D",
-      "Ideal para regalo o uso personal"
-    ],
-    "images": [
-      "assets/products/chopp-villa-mitre.svg"
-    ]
+    "details": ["Personalización temática del club","Fabricación 3D","Ideal para regalo o uso personal"],
+    "images": ["assets/products/chopp-villa-mitre.svg"]
   },
   {
     "id": "chopp-la-armonia",
@@ -96,14 +52,8 @@
     "badge": "Club La Armonía",
     "short": "Chopp personalizado con identidad del Club La Armonía.",
     "description": "Chopp personalizado del Club La Armonía, desarrollado como producto temático y fabricado mediante impresión 3D.",
-    "details": [
-      "Diseño personalizado",
-      "Fabricación 3D",
-      "Ideal para regalo o uso personal"
-    ],
-    "images": [
-      "assets/products/chopp-la-armonia.svg"
-    ]
+    "details": ["Diseño personalizado","Fabricación 3D","Ideal para regalo o uso personal"],
+    "images": ["assets/products/chopp-la-armonia.svg"]
   },
   {
     "id": "chopp-puerto-comercial",
@@ -116,13 +66,7 @@
     "badge": "Puerto Comercial",
     "short": "Chopp personalizado con identidad del Club Puerto Comercial.",
     "description": "Chopp personalizado del Club Puerto Comercial con diseño temático y fabricación 3D.",
-    "details": [
-      "Personalización temática del club",
-      "Fabricación 3D",
-      "Ideal para regalo o uso personal"
-    ],
-    "images": [
-      "assets/products/chopp-puerto-comercial.svg"
-    ]
+    "details": ["Personalización temática del club","Fabricación 3D","Ideal para regalo o uso personal"],
+    "images": ["assets/products/chopp-puerto-comercial.svg"]
   }
 ]
