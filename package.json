@@ -1,0 +1,11 @@
+{
+  "name": "vector-design-static-modular-pilot",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Prueba aislada sobre repositorio histórico; NO es la versión actual de ChatGPT Sites.",
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "check": "node --check src/main.js && node --check src/services/catalog.js && node --check src/repositories/products.js && node --check src/components/carousel.js"
+  }
+}
